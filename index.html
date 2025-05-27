@@ -1,46 +1,60 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random UserID</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="static/css/index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random User Card</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins :wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="static/css/commons.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/title.css">
+  <link rel="stylesheet" href="static/css/userCard.css">
 </head>
 <body>
-    <div class="flex flex-col items-center h-screen">
-        <header class="title p-6">
-            <h1 class="kdam-thmor-pro-regular text-[#1E3A5F] text-[40px]">Random UserID Generator</h1>
-        </header>
+  <div class="flex flex-col items-center h-screen bg-gray-100">
+    <!-- Header -->
+    <header class="title p-6 text-center">
+      <h1>Business Card</h1>
+    </header>
 
-        <main class="grow flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-4 space-y-6">
-            <label class="kdam-thmor-pro-regular text-[#1E3A5F] p-6 text-center text-[25px]">
-                Press the button to generate a random UserID
-            </label>
-            <button id="btn" class="bg-[#1E3A5F] w-fit px-5 py-2 kdam-thmor-pro-regular text-[#F0F8FF] rounded-md text-[25px]">
-                Generate
-            </button>
-            <h4 id="errorCase" class="kdam-thmor-pro-regular text-[#1E3A5F] p-6 text-center"></h4>
+    <!-- Main Content -->
+    <main class="grow flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-4 space-y-6 mt-6">
+      <!-- Generate Button -->
+      <button id="btn" class="generate-button">Generate</button>
 
-            <!-- hidden card -->
-            <div id="userCard" class="w-full flex-grow flex items-center justify-center">
-                <div class="flex flex-col items-center bg-[#1E3A5F] p-6 rounded-lg shadow-lg w-full max-w-md transition-all duration-500">
-                    <div class="flex flex-row items-center mb-4 w-full">
-                        <figure class="w-1/3 flex justify-center">
-                            <img id="img" alt="User Image" class="w-[80px] h-[80px] rounded-md border-2 border-white bg-[#d8e5f5]">
-                        </figure>
-                        <h4 id="generalInfo" class="kdam-thmor-pro-regular text-left w-2/3 text-[#F0F8FF]"></h4>
-                    </div>
-                    <hr class="border-[#F0F8FF] my-2 w-full">
-                    <h4 id="liveInfo" class="kdam-thmor-pro-regular text-left w-full text-[#F0F8FF]"></h4>
-                    <hr class="border-[#F0F8FF] my-2 w-full">
-                    <h4 id="email" class="kdam-thmor-pro-regular text-center w-full text-[#F0F8FF]"></h4>
-                    <h4 id="cell" class="kdam-thmor-pro-regular text-center w-full text-[#F0F8FF]"></h4>
-                </div>
+      <!-- Hidden User Card -->
+      <div id="userCard" class="hidden-card">
+        <div class="business-card flex bg-white rounded-lg shadow-lg overflow-hidden">
+          <!-- Left Side -->
+          <div class="left-side flex flex-col p-6 border-r border-gray-200">
+            <img id="profileImage" src="" alt="Profile Picture" class="profile-image mb-4" />
+            <h3 id="fullName" class="name text-xl font-bold"></h3>
+            <p id="position" class="position text-gray-600">CEO, ProCrew</p>
+
+            <div class="contact-info mt-6">
+              <div class="contact-item">📞 Tel: <span id="phone" class="text-gray-600"></span></div>
+              <div class="contact-item">📧 Email: <span id="email" class="text-gray-600"></span></div>
             </div>
-        </main>
-    </div>
-    <script src="static/js/script.js"></script>
+          </div>
+
+          <!-- Right Side -->
+          <div class="right-side p-6">
+            <h2 class="company-details-title text-lg font-bold mb-4">Company Details</h2>
+            <div class="details-item">🔗 Website: www.procrew.pro</div>
+            <div class="details-item">👥 Employees: 50 - 100</div>
+            <div class="details-item">📍 Location: <span id="location" class="text-gray-600"></span></div>
+            <div class="details-item">Note: I am available everyday from 9:00 AM to 5:00 PM</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="static/js/script.js"></script>
 </body>
 </html>
