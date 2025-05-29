@@ -1,60 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Random User Card</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins :wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="static/css/commons.css">
-  <link rel="stylesheet" href="static/css/index.css">
-  <link rel="stylesheet" href="static/css/title.css">
-  <link rel="stylesheet" href="static/css/userCard.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Card</title>
+    <link rel="stylesheet" href="static/css/index.css">
 </head>
 <body>
-  <div class="flex flex-col items-center h-screen bg-gray-100">
-    <!-- Header -->
-    <header class="title p-6 text-center">
-      <h1>Business Card</h1>
-    </header>
-
-    <!-- Main Content -->
-    <main class="grow flex flex-col items-center justify-center w-full max-w-4xl mx-auto px-4 space-y-6 mt-6">
-      <!-- Generate Button -->
-      <button id="btn" class="generate-button">Generate</button>
-
-      <!-- Hidden User Card -->
-      <div id="userCard" class="hidden-card">
-        <div class="business-card flex bg-white rounded-lg shadow-lg overflow-hidden">
-          <!-- Left Side -->
-          <div class="left-side flex flex-col p-6 border-r border-gray-200">
-            <img id="profileImage" src="" alt="Profile Picture" class="profile-image mb-4" />
-            <h3 id="fullName" class="name text-xl font-bold"></h3>
-            <p id="position" class="position text-gray-600">CEO, ProCrew</p>
-
-            <div class="contact-info mt-6">
-              <div class="contact-item">📞 Tel: <span id="phone" class="text-gray-600"></span></div>
-              <div class="contact-item">📧 Email: <span id="email" class="text-gray-600"></span></div>
-            </div>
-          </div>
-
-          <!-- Right Side -->
-          <div class="right-side p-6">
-            <h2 class="company-details-title text-lg font-bold mb-4">Company Details</h2>
-            <div class="details-item">🔗 Website: www.procrew.pro</div>
-            <div class="details-item">👥 Employees: 50 - 100</div>
-            <div class="details-item">📍 Location: <span id="location" class="text-gray-600"></span></div>
-            <div class="details-item">Note: I am available everyday from 9:00 AM to 5:00 PM</div>
-          </div>
+    <div class="card">
+        <div class="left">
+            <img id="photo" src="" alt="User photo">
+            <h2 id="fullname"></h2>
+            <p id="username"></p>
+            <p id="dob"></p>
+            <p id="gender"></p>
         </div>
-      </div>
-    </main>
-  </div>
-
-  <!-- JavaScript -->
-  <script src="static/js/script.js"></script>
+        <div class="right">
+            <h3>Personal Info</h3>
+            <p id="email"></p>
+            <p id="address"></p>
+            <p id="phone"></p>
+            <p id="nat"></p>
+        </div>
+    </div>
+    <script src="static/js/index.js"></script>
 </body>
 </html>
